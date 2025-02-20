@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CRMConnect.Models.Sales>
+
+<h2>Sales Tracking</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sale ID</th>
+            <th>Customer ID</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sale in Model)
+        {
+            <tr>
+                <td>@sale.SaleID</td>
+                <td>@sale.CustomerID</td>
+                <td>@sale.Amount</td>
+                <td>@sale.SaleDate</td>
+                <td>@sale.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/SalesTracking/Create" class="btn btn-primary">Add New Sale</a>
+
