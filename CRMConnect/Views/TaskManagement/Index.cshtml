@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CRMConnect.Models.Task>
+
+<h2>Task Management</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Task ID</th>
+            <th>Assigned To</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model)
+        {
+            <tr>
+                <td>@task.TaskID</td>
+                <td>@task.AssignedTo</td>
+                <td>@task.DueDate</td>
+                <td>@task.Status</td>
+                <td>@task.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/TaskManagement/Create" class="btn btn-primary">Create New Task</a>
+

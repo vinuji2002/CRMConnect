@@ -1,0 +1,20 @@
+﻿@model IEnumerable<CRMConnect.Models.Customer>
+<h2>Customer List</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Address</th>
+    </tr>
+    @foreach (var customer in Model)
+    {
+        <tr>
+            <td>@customer.Name</td>
+            <td>@customer.Email</td>
+            <td>@customer.Phone</td>
+            <td>@customer.Address</td>
+        </tr>
+    }
+</table>
+<a href="/Customer/Create">Add New Customer</a>
