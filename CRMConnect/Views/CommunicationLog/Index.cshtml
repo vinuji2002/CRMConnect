@@ -1,0 +1,30 @@
+﻿@model IEnumerable<CRMConnect.Models.CommunicationLog>
+
+<h2>Communication Log</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Log ID</th>
+            <th>Customer ID</th>
+            <th>Type</th>
+            <th>Date</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var log in Model)
+        {
+            <tr>
+                <td>@log.LogID</td>
+                <td>@log.CustomerID</td>
+                <td>@log.CommunicationType</td>
+                <td>@log.CommunicationDate</td>
+                <td>@log.Notes</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/CommunicationLog/Create" class="btn btn-primary">Add New Log</a>
+
